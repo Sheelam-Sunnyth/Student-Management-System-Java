@@ -1,0 +1,22 @@
+# VS Code settings
+.vscode/
+
+# IntelliJ settings (safe even if you don't use IntelliJ)
+.idea/
+
+# Java class files
+*.class
+
+# Build output directories
+bin/
+out/
+
+# Temporary files
+*.log
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore JARs in lib folder
+lib/*.jar
