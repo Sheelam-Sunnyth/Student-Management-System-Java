@@ -3,7 +3,7 @@
 # 🧑‍🎓 Student Management System  
 ### *(Java + Swing GUI + MySQL + JDBC)*
 
-A complete desktop-based Student Management System built using **Java**, **Swing GUI**, and **MySQL**, featuring CRUD operations, searching, sorting, and a clean graphical interface.
+A desktop-based Student Management System built using **Java**, **Swing GUI**, and **MySQL**, featuring CRUD operations, search, sort, and an interactive interface.
 
 ---
 
@@ -22,8 +22,8 @@ A complete desktop-based Student Management System built using **Java**, **Swing
 - [Project Architecture](#-project-architecture)
 - [Clone the Repository](#-clone-the-repository)
 - [Database Setup](#-database-setup)
-- [Configure JDBC](#-configure-database-connection)
-- [Run the Project](#-how-to-run-the-project)
+- [Configure JDBC Connection](#-configure-jdbc-connection)
+- [Run the Project](#-run-the-project)
 - [Tech Stack](#-tech-stack)
 - [Future Enhancements](#-future-enhancements)
 - [Author](#-author)
@@ -32,23 +32,16 @@ A complete desktop-based Student Management System built using **Java**, **Swing
 
 ## 📋 Project Overview
 
-This Student Management System is a **Java Swing-based desktop application** that uses **MySQL** to store student details.  
-It allows users to:
-
-- Add student information  
-- View all student records  
-- Search students by ID, Last Name, or Major  
-- Sort records by First Name, Last Name, or Major  
-- Modify student details  
-- Display results in a JTable GUI  
+This Student Management System is built using **Java Swing** for UI and **MySQL** for backend data storage.  
+Features include adding students, modifying data, searching, sorting, displaying in tables, and simple database connectivity with JDBC.
 
 ---
 
 ## 🚀 Features
 
 ### 🎓 Student Operations
-- Add new students  
-- Modify details  
+- Add Students  
+- Modify Records  
 - Search by:
   - Student ID  
   - Last Name  
@@ -59,92 +52,96 @@ It allows users to:
   - Major  
 
 ### 🖥 GUI
-- Java Swing interface  
-- JTable to display results  
+- Built using Java Swing  
+- JTable to display data  
+
+### 🗄 Backend
+- MySQL Relational Database  
+- JDBC for connection  
 
 ---
 
 ## 🧱 Project Architecture
 
+```txt
 Student-Management-System/
 │
 ├── src/
-│ ├── AppGUI.java
-│ ├── dbConnect.java
-│ ├── Table.java
-│ └── Main.java
+│   ├── AppGUI.java
+│   ├── dbConnect.java
+│   ├── Table.java
+│   └── Main.java
 │
 ├── lib/
-│ └── mysql-connector-j-9.5.0.jar
+│   └── mysql-connector-j-9.5.0.jar
 │
 ├── student_data.sql
 ├── .gitignore
 └── README.md
+```
 
-yaml
-Copy code
-
----
-
-## 📥 Clone the Repository
-
+📥 Clone the Repository
 ```bash
 git clone https://github.com/Sheelam-Sunnyth/Student-Management-System-Java.git
-bash
-Copy code
+```
+```bash
 cd Student-Management-System-Java
+```
+
 🗄 Database Setup
-1️⃣ Create MySQL Database
-sql
-Copy code
+
+Create the MySQL database:
+
 CREATE DATABASE studentdb;
 USE studentdb;
-2️⃣ Import the SQL File
-pgsql
-Copy code
-student_data.sql
-🔌 Configure Database Connection
-In dbConnect.java:
 
-java
-Copy code
+Import the student_data.sql file using MySQL Workbench.
+This creates the "sdata" table along with sample data.
+
+🔌 Configure JDBC Connection
+
+Open dbConnect.java and update connection details:
+
 String url = "jdbc:mysql://localhost:3306/studentdb?useSSL=false&serverTimezone=UTC";
 String user = "root";
-String pass = "1236";   // change this to your MySQL password
-🏃 How to Run the Project
-▶ Run using VS Code
-Open the project
+String pass = "1236"; (change this to your MySQL password)
 
+🏃 Run the Project
+
+Using VS Code:
+
+Open the project folder
 Open Main.java
+Click Run
 
-Click Run ▶
+Using Terminal (Windows):
 
-▶ Run using Terminal
 Compile:
-bash
-Copy code
-javac -d bin -cp "lib/*" src/*.java
+javac -d bin -cp "lib/" src/.java
+
 Run:
-bash
-Copy code
 java -cp "bin;lib/*" Main
+
 🛠 Tech Stack
-Component	Technology
-Language	Java
-GUI Framework	Swing
-Database	MySQL
-Connectivity	JDBC
-IDE	VS Code
+
+Programming Language: Java
+GUI Framework: Swing
+Database: MySQL
+Connectivity: JDBC
+IDE: VS Code
 
 🔮 Future Enhancements
-Better UI (GridBag/JavaFX)
-Login/Authentication
+
+Improved UI (GridBagLayout or JavaFX)
+Login & Authentication
 Pagination
+Export to CSV/Excel
 Dark Mode
-Export to Excel/CSV
+REST API version
 
 ✨ Author
+
 Sunnyth Sheelam
-📍 Hyderabad, India
-🎓 AIML Student
-🔗 GitHub: Sheelam-Sunnyth
+Hyderabad, India
+AIML Student
+GitHub: Sheelam-Sunnyth
