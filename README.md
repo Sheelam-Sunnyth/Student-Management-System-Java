@@ -20,7 +20,7 @@ A complete desktop-based Student Management System built using **Java**, **Swing
 ## 📚 Table of Contents
 - [Project Overview](#-project-overview)
 - [Features](#-features)
-- [Architecture](#-project-architecture)
+- [Project Architecture](#-project-architecture)
 - [Clone the Repository](#-clone-the-repository)
 - [Database Setup](#-database-setup)
 - [Configure JDBC](#-configure-database-connection)
@@ -47,68 +47,59 @@ Ideal for learning **OOP**, **GUI programming**, and **JDBC database connectivit
 
 ---
 
-🚀 Features
-🎓 Student Operations
-Add new students
+## 🚀 Features
 
-Modify existing details
+### 🎓 Student Operations
+- Add new students  
+- Modify existing details  
+- Search by:
+  - Student ID  
+  - Last Name  
+  - Major  
+- Sort by:
+  - First Name  
+  - Last Name  
+  - Major  
 
-Search by:
+### 🖥 GUI
+- Java Swing-based clean interface  
+- JTable to display results  
+- Easy navigation buttons  
 
-Student ID
+### 🗄 Database
+- MySQL backend  
+- JDBC connectivity  
+- Prepared SQL schema included (`student_data.sql`)  
 
-Last Name
+---
 
-Major
+## 🧱 Project Architecture
 
-Sort by:
-
-First Name
-
-Last Name
-
-Major
-
-🖥 GUI
-Java Swing-based clean interface
-
-JTable to display results
-
-Easy navigation buttons
-
-🗄 Database
-MySQL backend
-
-JDBC connectivity
-
-Prepared SQL schema included (student_data.sql)
-
-🧱 Project Architecture
-pgsql
-Copy code
 Student-Management-System/
 │
 ├── src/
-│   ├── AppGUI.java        # Main application GUI
-│   ├── dbConnect.java     # JDBC MySQL connection
-│   ├── Table.java         # Converts ResultSet → JTable model
-│   └── Main.java          # Entry point
+│ ├── AppGUI.java
+│ ├── dbConnect.java
+│ ├── Table.java
+│ └── Main.java
 │
 ├── lib/
-│   └── mysql-connector-j-9.5.0.jar
+│ └── mysql-connector-j-9.5.0.jar
 │
 ├── student_data.sql
 ├── .gitignore
 ├── LICENSE
 └── README.md
-📥 Clone the Repository
-Run the following command:
 
-bash
+yaml
 Copy code
-git clone https://github.com/<your-username>/Student-Management-System-Java.git
-Move into the project folder:
 
+---
+
+## 📥 Clone the Repository
+
+```bash
+git clone https://github.com/Sheelam-Sunnyth/Student-Management-System-Java.git
 bash
 Copy code
 cd Student-Management-System-Java
@@ -118,37 +109,39 @@ sql
 Copy code
 CREATE DATABASE studentdb;
 USE studentdb;
-2️⃣ Import SQL File
-File: student_data.sql
+2️⃣ Import the SQL File
+Use MySQL Workbench to import:
 
-This creates sdata table with sample student entries.
+pgsql
+Copy code
+student_data.sql
+This will create the sdata table with sample data.
 
-🔌 Configure DATABASE Connection
-Update dbConnect.java:
+🔌 Configure Database Connection
+Update the following in dbConnect.java:
 
 java
 Copy code
 String url = "jdbc:mysql://localhost:3306/studentdb?useSSL=false&serverTimezone=UTC";
 String user = "root";
-String pass = "1236";   // change to your MySQL password
+String pass = "1236";   // change this to your MySQL password
 🏃 How to Run the Project
 ▶ Run using VS Code
-Open the folder in VS Code
+Open the project in VS Code
 
 Open Main.java
 
 Click Run ▶
 
 ▶ Run using Terminal (Windows)
-Compile
+Compile:
 bash
 Copy code
 javac -d bin -cp "lib/*" src/*.java
-Run
+Run:
 bash
 Copy code
 java -cp "bin;lib/*" Main
-
 🛠 Tech Stack
 Component	Technology
 Programming Language	Java
@@ -160,11 +153,16 @@ Extensions	Java Extension Pack
 
 🔮 Future Enhancements
 Improved UI layout (GridBag / JavaFX)
+
 Login & Authentication
+
 Pagination for large records
+
 Export to CSV / Excel
+
 Dark Mode UI
-REST API backend version
+
+REST API version
 
 ✨ Author
 Sunnyth Sheelam
