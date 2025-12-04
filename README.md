@@ -10,7 +10,6 @@ A complete desktop-based Student Management System built using **Java**, **Swing
 ![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql)
 ![Swing](https://img.shields.io/badge/Java-Swing-green?style=for-the-badge)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Mac-lightgrey?style=for-the-badge)
 
 </div>
@@ -43,15 +42,13 @@ It allows users to:
 - Modify student details  
 - Display results in a JTable GUI  
 
-Ideal for learning **OOP**, **GUI programming**, and **JDBC database connectivity**.
-
 ---
 
 ## 🚀 Features
 
 ### 🎓 Student Operations
 - Add new students  
-- Modify existing details  
+- Modify details  
 - Search by:
   - Student ID  
   - Last Name  
@@ -62,14 +59,8 @@ Ideal for learning **OOP**, **GUI programming**, and **JDBC database connectivit
   - Major  
 
 ### 🖥 GUI
-- Java Swing-based clean interface  
+- Java Swing interface  
 - JTable to display results  
-- Easy navigation buttons  
-
-### 🗄 Database
-- MySQL backend  
-- JDBC connectivity  
-- Prepared SQL schema included (`student_data.sql`)  
 
 ---
 
@@ -88,7 +79,6 @@ Student-Management-System/
 │
 ├── student_data.sql
 ├── .gitignore
-├── LICENSE
 └── README.md
 
 yaml
@@ -110,15 +100,11 @@ Copy code
 CREATE DATABASE studentdb;
 USE studentdb;
 2️⃣ Import the SQL File
-Use MySQL Workbench to import:
-
 pgsql
 Copy code
 student_data.sql
-This will create the sdata table with sample data.
-
 🔌 Configure Database Connection
-Update the following in dbConnect.java:
+In dbConnect.java:
 
 java
 Copy code
@@ -127,13 +113,13 @@ String user = "root";
 String pass = "1236";   // change this to your MySQL password
 🏃 How to Run the Project
 ▶ Run using VS Code
-Open the project in VS Code
+Open the project
 
 Open Main.java
 
 Click Run ▶
 
-▶ Run using Terminal (Windows)
+▶ Run using Terminal
 Compile:
 bash
 Copy code
@@ -144,25 +130,18 @@ Copy code
 java -cp "bin;lib/*" Main
 🛠 Tech Stack
 Component	Technology
-Programming Language	Java
+Language	Java
 GUI Framework	Swing
 Database	MySQL
 Connectivity	JDBC
 IDE	VS Code
-Extensions	Java Extension Pack
 
 🔮 Future Enhancements
-Improved UI layout (GridBag / JavaFX)
-
-Login & Authentication
-
-Pagination for large records
-
-Export to CSV / Excel
-
-Dark Mode UI
-
-REST API version
+Better UI (GridBag/JavaFX)
+Login/Authentication
+Pagination
+Dark Mode
+Export to Excel/CSV
 
 ✨ Author
 Sunnyth Sheelam
