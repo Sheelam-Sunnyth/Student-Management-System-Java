@@ -91,20 +91,21 @@ cd Student-Management-System-Java
 🗄 Database Setup
 
 Create the MySQL database:
-
+``` bash
 CREATE DATABASE studentdb;
 USE studentdb;
-
+```
 Import the student_data.sql file using MySQL Workbench.
 This creates the "sdata" table along with sample data.
 
 🔌 Configure JDBC Connection
 
 Open dbConnect.java and update connection details:
-
+```bash
 String url = "jdbc:mysql://localhost:3306/studentdb?useSSL=false&serverTimezone=UTC";
 String user = "root";
 String pass = "1236"; (change this to your MySQL password)
+```
 
 🏃 Run the Project
 
@@ -117,10 +118,13 @@ Click Run
 Using Terminal (Windows):
 
 Compile:
+```bash
 javac -d bin -cp "lib/" src/.java
-
+```
 Run:
+```bash
 java -cp "bin;lib/*" Main
+```
 
 🛠 Tech Stack
 
