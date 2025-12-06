@@ -80,7 +80,7 @@ Student-Management-System/
 └── README.md
 ```
 
-📥 Clone the Repository
+## 📥 Clone the Repository
 ```bash
 git clone https://github.com/Sheelam-Sunnyth/Student-Management-System-Java.git
 ```
@@ -88,7 +88,7 @@ git clone https://github.com/Sheelam-Sunnyth/Student-Management-System-Java.git
 cd Student-Management-System-Java
 ```
 
-🗄 Database Setup
+## 🗄 Database Setup
 
 Create the MySQL database:
 ``` bash
@@ -98,7 +98,7 @@ USE studentdb;
 Import the student_data.sql file using MySQL Workbench.
 This creates the "sdata" table along with sample data.
 
-🔌 Configure JDBC Connection
+## 🔌 Configure JDBC Connection
 
 Open dbConnect.java and update connection details:
 ```bash
@@ -107,15 +107,14 @@ String user = "root";
 String pass = "1236"; (change this to your MySQL password)
 ```
 
-🏃 Run the Project
+## 🏃 Run the Project
 
-Using VS Code:
+- Using VS Code:
+   - Open the project folder
+   - Open Main.java
+   - Click Run
 
-Open the project folder
-Open Main.java
-Click Run
-
-Using Terminal (Windows):
+- Using Terminal (Windows):
 
 Compile:
 ```bash
@@ -126,26 +125,26 @@ Run:
 java -cp "bin;lib/*" Main
 ```
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
-Programming Language: Java
-GUI Framework: Swing
-Database: MySQL
-Connectivity: JDBC
-IDE: VS Code
+- Programming Language: Java
+- GUI Framework: Swing
+- Database: MySQL
+- Connectivity: JDBC
+- IDE: VS Code
 
-🔮 Future Enhancements
+## 🔮 Future Enhancements
 
-Improved UI (GridBagLayout or JavaFX)
-Login & Authentication
-Pagination
-Export to CSV/Excel
-Dark Mode
-REST API version
+- Improved UI (GridBagLayout or JavaFX)
+- Login & Authentication
+- Pagination
+- Export to CSV/Excel
+- Dark Mode
+- REST API version
 
-✨ Author
+## ✨ Author
 
-Sunnyth Sheelam
-Hyderabad, India
-AIML Student
-GitHub: Sheelam-Sunnyth
+- Sunnyth Sheelam
+- Hyderabad, India
+- AIML Student
+- GitHub: Sheelam-Sunnyth
